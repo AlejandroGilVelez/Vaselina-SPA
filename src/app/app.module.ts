@@ -10,6 +10,10 @@ import { AuthInterceptorService } from './shared/interceptors/auth-interceptor.s
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 
+import { MatCardModule } from '@angular/material/card'
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatIconModule } from '@angular/material/icon'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +23,10 @@ import { ButtonModule } from 'primeng/button';
     BrowserModule,
     AppRoutingModule,
     InputTextModule,
-    ButtonModule
+    ButtonModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatIconModule
   ],
   providers: [
     {
