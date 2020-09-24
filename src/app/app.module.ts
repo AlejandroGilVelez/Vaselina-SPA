@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,9 +12,7 @@ import { AuthInterceptorService } from './shared/interceptors/auth-interceptor.s
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 
-import { MatCardModule } from '@angular/material/card'
-import { MatFormFieldModule } from '@angular/material/form-field'
-import { MatIconModule } from '@angular/material/icon'
+
 
 @NgModule({
   declarations: [
@@ -24,9 +24,8 @@ import { MatIconModule } from '@angular/material/icon'
     AppRoutingModule,
     InputTextModule,
     ButtonModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatIconModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     {

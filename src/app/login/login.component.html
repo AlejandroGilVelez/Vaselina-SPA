@@ -1,4 +1,27 @@
-<div class="login-container">
+
+<div class="container">
+    <div class="container">   
+        <span class="p-input-icon-left">
+            <i class="pi pi-user"></i>
+            <input type="text" [(ngModel)]="objLogin.correo" placeholder="Email">         
+        </span>
+    </div>
+    <div class="container">
+        <span class="p-input-icon-left">
+            <i class="pi pi-key"></i>
+            <input type="password" [(ngModel)]="objLogin.password" placeholder="Password">         
+        </span>
+    </div>
+    <div>
+        <p-button (click)="login()" label="Login" class="btn btn-light"></p-button>
+    </div>
+
+</div>
+
+
+<!-- ***************** -->
+
+<!-- <div class="login-container">
     <mat-card class="login-card">
         <mat-card-content>
           <div>
@@ -6,13 +29,13 @@
                   <div class="login-control-input">
                       <mat-icon>email</mat-icon>
                       <mat-form-field class="login-form-field">
-                          <input matInput placeholder="E-mail" aria-label="Email" formControlName="email">                          
+                          <input matInput placeholder="E-mail" aria-label="Email" [(ngModel)]="objLogin.email" formControlName="email">                          
                       </mat-form-field>
                   </div>
                   <div class="login-control-input">
                       <mat-icon>vpn_key</mat-icon>
                       <mat-form-field class="login-form-field">
-                          <input matInput type="password" placeholder="Password" aria-label="Password" formControlName="password">                          
+                          <input matInput type="password" placeholder="Password" [(ngModel)]="objLogin.password" aria-label="Password" formControlName="password">                          
                       </mat-form-field>					 
                   </div>
                   <br />
@@ -20,15 +43,15 @@
                       <p class="login-error"></p>
                   </div>
                   <div>
-                      <button mat-raised-button type="submit" color="primary">Login</button>
+                      <button (click)="login()" mat-raised-button type="submit" color="primary">Login</button>
                   </div>
               </form>
           </div>
         </mat-card-content>
     </mat-card>
-  </div>
+  </div> -->
   
-    
+    <!-- *******************************     -->
   
   <!-- <div class="container center top">
       <div class="row">
