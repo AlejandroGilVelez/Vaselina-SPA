@@ -18,4 +18,12 @@ export class AuthService {
     return this.http.post<AuthDto>(`${environment.baseUrl}Auth/login`, objLogin);
   }
 
+  estaLogueado(): boolean{
+    return localStorage.getItem("autkey") != null && localStorage.getItem("autkey").length > 1;
+  }
+
+  deleteKey(){
+    localStorage.removeItem("autkey");
+  }
+
 }
