@@ -12,6 +12,8 @@ import { AuthInterceptorService } from './shared/interceptors/auth-interceptor.s
 
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
+import { InputSwitchModule } from 'primeng/inputswitch';
+
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
@@ -32,7 +34,8 @@ import { UserComponent } from './user/user.component';
     InputTextModule,
     ButtonModule,
     HttpClientModule,
-    FormsModule    
+    FormsModule,
+    InputSwitchModule    
   ],
   providers: [
     {

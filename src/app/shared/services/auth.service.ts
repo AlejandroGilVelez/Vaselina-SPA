@@ -7,23 +7,21 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class AuthService {  
 
-  nombreUsuario: string;
-
+  userName: string;
 
   constructor(private http: HttpClient) { }
 
   loginToken(objLogin: LoginDto){
-    return this.http.post<AuthDto>(`${environment.baseUrl}Auth/login`, objLogin);
+     return this.http.post<AuthDto>(`${environment.baseUrl}Auth/login`, objLogin);     
   }
 
   estaLogueado(): boolean{
-    return localStorage.getItem("autkey") != null && localStorage.getItem("autkey").length > 1;
+    return localStorage.getItem("autkey") != null && localStorage.getItem("autkey").length > 1;    
   }
 
   deleteKey(){
     localStorage.removeItem("autkey");
   }
-
 }

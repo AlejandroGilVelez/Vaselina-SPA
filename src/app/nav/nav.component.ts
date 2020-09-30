@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../shared/services/auth.service';
 
+
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
@@ -9,10 +10,13 @@ import { AuthService } from '../shared/services/auth.service';
 })
 export class NavComponent implements OnInit {
 
+  nombreUsuario: string;
+
   constructor(private authService: AuthService,
               private route: Router) { }
 
   ngOnInit(): void {
+    
   }
 
   logout(){
