@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from '../models/user';
+import { GlobalFilterService } from '../shared/services/global-filter.service';
 import { UserService } from '../shared/services/user.service';
 
 @Component({
@@ -12,14 +14,17 @@ export class UserComponent implements OnInit {
   recordsUsers: Array<User> = [];
   usuarioSeleccionado: User;
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService,
+              private globalFilterService: GlobalFilterService,
+              private route: Router) { }
 
   ngOnInit(): void {
     this.getUsers();
   }
 
   addUser(){
-
+    this.globalFilterService.usuarioSeleccionado = null;
+    this.route.navigateByUrl("/user-edit");
   }
 
   delete(row: User){

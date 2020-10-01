@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem("autey", response.token);
         this.tokenDecode = jwt_decode(response.token);
         this.nombreUsuario = this.tokenDecode.unique_name;
-        this.route.navigateByUrl("home");
+        this.route.navigateByUrl("/home");
       }, 
       (error) => {
         console.log("Error en el login");
