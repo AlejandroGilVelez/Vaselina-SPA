@@ -3,7 +3,8 @@ import { LoginDto } from '../dto/loginDto';
 import { AuthService } from '../shared/services/auth.service';
 import * as jwt_decode from "jwt-decode";
 import { Router } from '@angular/router';
-import { constants } from 'buffer';
+import { MessageService } from 'primeng/api';
+
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,8 @@ export class LoginComponent implements OnInit {
   tokenDecode: any;
 
   constructor(private authService: AuthService,
-              private route: Router) { }
+              private route: Router,
+              private messageService: MessageService) { }
 
   ngOnInit(): void {
   }
@@ -31,7 +33,11 @@ export class LoginComponent implements OnInit {
         this.route.navigateByUrl("/home");
       }, 
       (error) => {
-        console.log("Error en el login");
+        this.messageService.add({
+          severity: "error",
+          summary: "Error al login",
+          detail: "Las credenciales ingresadas no son válidas"
+        })        
       });      
   }
 

@@ -12,4 +12,6 @@ export class User{
     telefono: string;
 
     activo: boolean;
+
+    rol: string;    
 }

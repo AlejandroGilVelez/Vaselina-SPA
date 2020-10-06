@@ -6,6 +6,7 @@
       <th scope="col">Nombres</th>
       <th scope="col">Apellidos</th>
       <th scope="col">Correo</th>
+      <th scope="col">Rol</th>
       <th scope="col">Activo</th>
       <th scope="col">
         <input type="button" class="btn btn-link" value="Nuevo" (click)="addUser()"/>
@@ -18,15 +19,36 @@
       <td>{{ item.nombres }}</td>
       <td>{{ item.apellidos }}</td>
       <td>{{ item.correo }}</td>
+      <td>{{ item.rol }}</td>
       <td><p-inputSwitch (onChange)="changeStatus($event,item)" [(ngModel)]="item.activo"></p-inputSwitch></td>
       <td>
-        <input type="button" class="btn btn-secondary m2" value="Editar" (click)="update(item)"/>
+        <input type="button" class="btn btn-secondary m2" value="Editar" (click)="edit(item)"/>
         <input type="button" class="btn btn-danger m2" value="Eliminar" (click)="delete(item)" />
       </td>
     </tr>
   </tbody>
 </table>
-<!-- <p-toast position="center" key="c" (onClose)="onReject()" [modal]="true" [baseZIndex]="5000">
+<p-toast position="center" key="c" (onClose)="onReject()" [baseZIndex]="5000">
+  <ng-template let-message pTemplate="message">
+      <div class="p-flex p-flex-column" style="flex: 1">
+          <div class="p-text-center">
+              <i class="pi pi-exclamation-triangle" style="font-size: 3rem"></i>
+              <h4>{{message.summary}}</h4>
+              <p>{{message.detail}}</p>
+          </div>
+          <div class="p-grid p-fluid">
+              <div class="p-col-6">
+                  <button type="button" pButton (click)="onConfirm()" label="Si" class="p-button-success"></button>
+              </div>
+              <div class="p-col-6">
+                  <button type="button" pButton (click)="onReject()" label="No" class="p-button-secondary"></button>
+              </div>
+          </div>
+      </div>
+  </ng-template>
+</p-toast>
+
+<!-- <p-toast position="center" key="c" (onClose)="onReject()" [baseZIndex]="5000">
     <ng-template let-message pTemplate="message">
         <div style="text-align: center">
             <i class="pi pi-exclamation-triangle" style="font-size: 3em"></i>

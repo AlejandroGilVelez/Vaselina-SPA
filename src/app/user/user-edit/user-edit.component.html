@@ -52,6 +52,13 @@
             [(ngModel)]="usuarioSeleccionado.telefono"
           />
         </div>
+        <div class="col-sm-6">
+          <label for="RolUsuario">Roles de Usuario</label>
+          <select class="form-control" name="RolUsuario" [(ngModel)]="usuarioSeleccionado.rol">
+            <option value="0" >-Seleccione tipo de rol de usuario-</option>
+            <option [value]="item" *ngFor="let item of recordsRol">{{item}}</option>
+          </select>
+        </div>
       </div>
       <div class="form-check row">
         <div class="form-check">
