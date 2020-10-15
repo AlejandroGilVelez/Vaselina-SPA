@@ -37,4 +37,8 @@ export class UserService {
     return this.http.delete(`${environment.baseUrl}User/Delete/${usuarioSeleccionado.id}`);
   }
 
+  edit(usuarioSeleccionado: User){
+    return this.http.put(`${environment.baseUrl}User/Update`, usuarioSeleccionado);
+  }
+
 }

@@ -1,0 +1,66 @@
+
+<app-nav></app-nav>
+<div class="container">
+    <h1 class="text-center">Solicitud de Información</h1>
+      <div class="form-group row">
+        <div class="col-sm-6">
+          <label for="Nombres">Nombres</label>
+          <input
+            type="text"
+            class="form-control"
+            id="Nombres"
+            [(ngModel)]="contactSeleccionado.nombres"
+          />
+        </div>
+        <div class="col-sm-6">
+          <label for="Empresa">Empresa</label>
+          <input
+            type="text"
+            class="form-control"
+            id="Empresa"
+            [(ngModel)]="contactSeleccionado.empresa"
+          />
+        </div>
+      </div>
+      <div class="form-group row">        
+        <div class="col-sm-6">
+          <label for="correo">Correo</label>
+          <input
+            type="email"
+            class="form-control"
+            id="correo"
+            aria-describedby="emailHelp"
+            [(ngModel)]="contactSeleccionado.correo"
+          />
+        </div>
+        <div class="col-sm-6">
+            <label for="Telefono">Teléfono/Celular</label>
+            <input
+              type="text"
+              class="form-control"
+              id="Telefono"
+              [(ngModel)]="contactSeleccionado.telefono"              
+            />
+          </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-12">            
+            <label for="Mensaje">Mensaje</label>           
+            <textarea 
+                rows="4" 
+                class="form-control rounded-0" 
+                id="Mensaje" 
+                pInputTextarea 
+                autoResize="autoResize" 
+                [(ngModel)]="contactSeleccionado.mensaje"></textarea>
+        </div>
+      </div>
+      <br />    
+      <button type="Cancelar" class="btn btn-secondary" (click)="cancelar()">
+        Cancelar
+      </button>
+      <button type="Guardar" class="btn btn-primary" (click)="guardar()">
+        Enviar
+      </button>
+    </div>
+    

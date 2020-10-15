@@ -10,6 +10,7 @@ import { ButtonModule } from 'primeng/button';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,7 @@ import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 
@@ -29,7 +31,8 @@ import { UserEditComponent } from './user/user-edit/user-edit.component';
     NavComponent,
     HomeComponent,
     UserComponent,
-    UserEditComponent
+    UserEditComponent,
+    ContactComponent    
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,8 @@ import { UserEditComponent } from './user/user-edit/user-edit.component';
     HttpClientModule,
     FormsModule,
     InputSwitchModule,    
-    ToastModule    
+    ToastModule,
+    InputTextareaModule    
   ],
   providers: [
     MessageService,
