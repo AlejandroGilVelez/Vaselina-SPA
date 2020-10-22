@@ -1,0 +1,103 @@
+<app-nav></app-nav>
+<div class="container">
+    <h1 class="text-center">{{esClienteNuevo? 'Creando' : 'Editando'}} Usuario</h1>
+      <div class="form-group row">
+        <div class="col-sm-6">
+          <label for="Nombres">Nombres</label>
+          <input
+            type="text"
+            class="form-control"
+            id="Nombres"
+            [(ngModel)]="clientSeleccionado.nombres"
+          />
+        </div>
+        <div class="col-sm-6">
+          <label for="Apellidos">Apellidos</label>
+          <input
+            type="text"
+            class="form-control"
+            id="Apellidos"
+            [(ngModel)]="clientSeleccionado.apellidos"
+          />
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-6">
+          <label for="Nit">Nit</label>
+          <input
+            type="text"
+            class="form-control"
+            id="Nit"
+            [(ngModel)]="clientSeleccionado.nit"
+          />
+        </div>
+        <div class="col-sm-6">
+          <label for="CorreoCliente">Correo</label>
+          <input
+            type="email"
+            class="form-control"
+            id="CorreoCliente"
+            aria-describedby="emailHelp"
+            [(ngModel)]="clientSeleccionado.correo"
+          />
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-6">
+          <label for="Telefono">Teléfono/Celular</label>
+          <input
+            type="text"
+            class="form-control"
+            id="Telefono"
+            [(ngModel)]="clientSeleccionado.telefono"
+          />
+        </div>
+        <div class="col-sm-6">
+            <label for="Direccion">Dirección</label>
+            <input
+              type="text"
+              class="form-control"
+              id="Direccion"
+              [(ngModel)]="clientSeleccionado.direccion"
+            />
+          </div>   
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-6">
+            <label for="Pais">País</label>
+            <input
+              type="text"
+              class="form-control"
+              id="Pais"
+              [(ngModel)]="clientSeleccionado.pais"
+            />
+          </div> 
+        <div class="col-sm-6">
+            <label for="Ciudad">Ciudad</label>
+            <input
+              type="text"
+              class="form-control"
+              id="Ciudad"
+              [(ngModel)]="clientSeleccionado.ciudad"
+            />
+          </div>             
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-6">
+            <label for="Zona">Zona</label>
+            <input
+              type="text"
+              class="form-control"
+              id="Zona"
+              [(ngModel)]="clientSeleccionado.zona"
+            />
+          </div>         
+      </div>      
+      <br />    
+      <button type="Cancelar" class="btn btn-secondary" (click)="cancelar()">
+        Cancelar
+      </button>
+      <button type="Guardar" class="btn btn-primary" (click)="guardar()">
+        Guardar
+      </button>
+    </div>

@@ -40,5 +40,4 @@ export class UserService {
   edit(usuarioSeleccionado: User){
     return this.http.put(`${environment.baseUrl}User/Update`, usuarioSeleccionado);
   }
-
 }

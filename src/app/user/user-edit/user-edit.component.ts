@@ -66,7 +66,7 @@ export class UserEditComponent implements OnInit {
             summary: "Guadado exitoso",
             detail: "El usuario se creo correctamente"
           });
-          this.route.navigateByUrl("user");
+          this.route.navigateByUrl("/user");
         },
         (error) => {
           this.messageService.add({
@@ -84,7 +84,7 @@ export class UserEditComponent implements OnInit {
             summary: "Guadado exitoso",
             detail: "El usuario se edito correctamente"
           });
-          this.route.navigateByUrl("user");
+          this.route.navigateByUrl("/user");
         },
         (error) => {
           this.messageService.add({

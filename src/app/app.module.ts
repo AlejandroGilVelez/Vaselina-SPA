@@ -21,6 +21,9 @@ import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { ContactComponent } from './contact/contact.component';
+import { ClientComponent } from './client/client.component';
+import { ClientEditComponent } from './client/client-edit/client-edit.component';
+
 
 
 
@@ -32,7 +35,9 @@ import { ContactComponent } from './contact/contact.component';
     HomeComponent,
     UserComponent,
     UserEditComponent,
-    ContactComponent    
+    ContactComponent,
+    ClientComponent,
+    ClientEditComponent    
   ],
   imports: [
     BrowserModule,
